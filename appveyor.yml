@@ -6,6 +6,7 @@ cache:
 
 install:
   - ps: Start-FileDownload https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.zip
+  - ulimit -a
   - echo N | 7z e elasticsearch-5.0.1.zip
   - dir
   # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
