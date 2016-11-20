@@ -5,7 +5,7 @@ cache:
   - 'C:\Users\%USERNAME%\.m2\repository'
 
 install:
-  - Start-FileDownload https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.zip
+  - ps: Start-FileDownload https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.zip
   - 7z e elasticsearch-5.0.1.zip
   - dir
   # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
