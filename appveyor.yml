@@ -1,3 +1,9 @@
+hosts:
+  localhost: 127.0.0.1
+
+cache:
+  - 'C:\Users\%USERNAME%\.m2\repository'
+
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
 
