@@ -8,9 +8,10 @@ install:
   # - ps: Start-FileDownload https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.zip
   # - echo N | 7z e elasticsearch-5.0.1.zip
   - elasticsearch-5.0.1\bin\elasticsearch-service.bat install
-  # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
+  - elasticsearch-5.0.1\bin\elasticsearch-service.bat start
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
 
 test_script:
-  # - mvn test 
+  - mvn test 
 
 build: off
