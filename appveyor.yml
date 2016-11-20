@@ -5,9 +5,12 @@ cache:
   - 'C:\Users\%USERNAME%\.m2\repository'
 
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
+  - Start-FileDownload https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.zip
+  - 7z e elasticsearch-5.0.1.zip
+  - dir
+  # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
 
 test_script:
-  - mvn test 
+  # - mvn test 
 
 build: off
